@@ -1,0 +1,23 @@
+.cart-container{
+    display:flex;
+    flex-direction: column; 
+    width: 20vw; 
+    margin-top:10px
+}
+b{
+    text-align: left;  
+}
+.computation{ 
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color:white;
+    padding:2px;
+}
+form{
+    display:flex;
+    flex-direction: column;
+}
+.submit-btn{
+    background-color: blue;
+} 

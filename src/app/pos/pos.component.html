@@ -1,0 +1,7 @@
+ 
+
+<div class="container">
+    <app-category (selectedCategory) = "selectedCategory($event)"  />
+    <app-products (addtoCartProduct) = "addtoCart($event)" />
+    <app-cart [Cartlist] =  "Cart"/>
+</div>

@@ -1,0 +1,25 @@
+<div class="cart-container">   
+    <mat-label class="computation">Total Price : <b>PHP {{this.ComputationData.Price | number:'1.2-2' }} </b></mat-label>
+    <mat-label class="computation">Total Qty : <b>PHP {{this.ComputationData.Qty | number:'1.2-2' }} </b></mat-label>
+    <mat-label class="computation">SubTotal : <b>PHP {{this.ComputationData.Subtotal | number:'1.2-2' }} </b></mat-label>
+    <mat-label class="computation">Total Vat : <b>PHP {{this.ComputationData.Vat | number:'1.2-2' }} </b></mat-label>
+    <mat-label class="computation">Grand Total : <b>PHP {{this.ComputationData.Gtotal | number:'1.2-2' }} </b></mat-label> 
+    <hr/>
+    <mat-label class="computation">Payment : <b>PHP {{this.ComputationData.Payment | number:'1.2-2' }} </b></mat-label> 
+    <mat-label class="computation">Change : <b>PHP {{this.ComputationData.Change | number:'1.2-2' }} </b></mat-label>
+    <form (submit)="$event.preventDefault()">
+        <mat-form-field>
+          <mat-label>Cash</mat-label>
+          <input matInput class="input-cash-payment" > 
+        </mat-form-field> 
+        <button mat-raised-button  >Submit</button>
+    </form>
+    <mat-label class="computation" *ngFor="let cart of Cartlist;let index = index">
+        <h5>{{cart.Name}} </h5>
+        <b>Qty : 1</b>
+        <b>Price :{{cart.Price}}</b>
+        <div>
+            <button (click)="handleRemove(index)">Remove</button>
+        </div>
+    </mat-label>
+</div>
